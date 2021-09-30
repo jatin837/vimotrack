@@ -6,3 +6,14 @@ This project aims to create a simple motion detector and tracker using **Backgro
 
 
 most successful background subtraction/foreground detection systems utilize fixed mounted cameras and in controlled lighting conditions.
+
+
+# How this works?
+1. the very first frame is marked as **First frame**
+2. we preprocess everyframe, following
+	- gaussian blur
+	- resize
+3. we calculate absolute difference of **First frame** with **subsequent frames**
+4. then, we apply thresholding technique
+5. detect the contours
+6. if contour size is greater or equal to min-area, the we detected some motion
