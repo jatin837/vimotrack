@@ -1,5 +1,5 @@
 from helper.parse_cli import get_cli_args
-from imutils.video import VideoStream
+#from imutils.video import VideoStream
 import datetime
 from PIL import Image as im
 import time
@@ -16,11 +16,11 @@ if __name__ == "__main__":
         v_source = cv2.VideoCapture(ipath)
 
     first_frame = None
-    i =0
+
     while True:
         frame = v_source.read()
         time.sleep(0.5)
-        data = im.fromarray(frame)
-        data.save(f'{i}.png')
-        i += 1
-        print(i)
+#       data = im.fromarray(frame)
+#       data.save(f'{i}.png')
+#       i += 1
+#       print(i)
